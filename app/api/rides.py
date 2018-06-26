@@ -10,7 +10,7 @@ RIDES = [
         'id': 1,
         'origin': 'Mombasa',
         'destination': 'Nairobi',
-        'travel_date': '23th June 2018',
+        'travel_date': '23rd June 2018',
         'time': '10:00 am',
         'price': 500,
         'requests': []
