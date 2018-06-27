@@ -1,82 +1,70 @@
-<html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-<title>Join Us  |  Sign In </title>
-     <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ride-With-Me|Login</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+
 </head>
 
-<body class="gradient_1">
-    <header>
-        <nav>
-            <ul id="left_nav">
-                <a href="../index.html">
-                    <li class="button_info">Home</li>
-                </a>
-                <a href="view_rides.html">
-                    <li class="button_info">Rides</li>
-                </a>
-            </ul>
-
-            <ul id="right_nav">              
-                <a href="signup.html">
-                    <li class="button_user">Sign Up</li>
-                </a>
-                <!--<a href=""><li>Sign Out</li></a>-->
-            </ul>
-        </nav>
-    </header>
-    <section class="all_content">
-
-        <form class="form_content" action="" method="POST">
-            <div class="register">
-
-                <div class="white_box">
-                    <img src=".avatar(2).png" class="avatar">
-                    <h1>Welcome back!</h1>
-
-                    <div class="add_ride">
-
-                        <label>Email</label>
-                        <input type="email" name="email" required placeholder="Enter your email Address">
-                        
-                        <label>Password</label>
-                        <input type="password" name="password" required placeholder="Enter your password">    
-                    
-                    </div>
-                    <br>
-                    <!--When form has been validated you can then be redirected to your dashboard-->
-                    <div id="button_page_center">
-                        <a href="profile.html" class="more_linkd">Sign In</a>
-                        <br>
-                        <br>
-                        <br>
-                        <a href="resetpass.html" class="more_link">Forgot your password?</a>
-                        
-                    </div>
-                    <br>
-                    <br>
-                    <div id="button_page_center">
-                        <!--If not yet signed in-->
-                        <a href="signup.html" class="more_link">Sign Up with Us?</a>
-                    </div>
-                </div> 
-                
-                
-
+<body class="details_pages">
+    <div class="overlay"></div>
+    <nav class="navbar">
+        <div class="navbar__container">
+            <div class="brand">
+                <p class="brand__name">Ride-With-Me</p>
+                <div><i class="fa fa-bars jsnavbar__toggle"></i></div>
             </div>
-
-        </form>
-
+            <div class="jsnavbar__links">
+                <div class="navbar__link">
+                    <a href="index.html">Sign In</a>
+                    <hr class="navbar__separator" />
+                </div>
+                <div class="navbar__link">
+                    <a href="signup.html">Sign Up</a>
+                    <hr class="navbar__separator" />
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="section">
+        <div class="content_container">
+            <div class="intro">
+                <h1>The Smart Way to get around</h1>
+                <p>Ride-With-Me lets you find a ride to your destination or share your drive</p>
+            </div>
+            <form class="form--user" id="login_form" action="rides.html" method="">
+                <div class="form--user_header">
+                    <h1>Sign in to your account</h1>
+                    <hr/>
+                </div>
+                <div class="form--user_group">
+                    <label class="form--user_label" for="email">Email</label>
+                    <input type="email" class="form--user_input" name="email" placeholder="you@example.com" required>
+                </div>
+                <div class="form--user_group">
+                    <label class="form--user_label" for="password">Password</label>
+                    <input type="password" class="form--user_input" name="password" placeholder="password" required>
+                </div>
+                <div class="form--user_action">
+                    <button type="submit" class="button--success button--lg">Sign In</button>
+                    <hr/>
+                    <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+                </div>
+            </form>
+        </div>
     </section>
-
-    <!--page Footer-->
-    <footer>
-        <ul>
-            <li>
-                Contact US
-            </li>
-            <p>2018 &copy; Ride With Me</p>
-        </ul>
+    <footer class="footer--main fixed_bottom">
+        <p>Syiekei &copy; 2018</p>
     </footer>
+
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>
