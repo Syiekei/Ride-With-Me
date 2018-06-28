@@ -1,0 +1,21 @@
+{
+  "name": "Ride-With-Me",
+  "description": "An app which allows users to register for a ride",
+  "scripts": {
+  },
+  "env": {
+    "": {
+      "required": true
+    }
+  },
+  "formation": {
+  },
+  "addons": [
+    "heroku-postgresql"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ]
+}
