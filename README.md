@@ -64,7 +64,7 @@ The server will run on port: 5000
 
 ##Demo
 
-View demo: [click](https://syiekei.github.io/Ride-With-Me/)
+View demo: [click](https://syiekei.github.io/Ride-With-Me/Project/UI/login.html)
 
 ## Testing API on Postman
 
