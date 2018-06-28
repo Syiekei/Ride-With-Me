@@ -62,6 +62,10 @@ python manage.py run
 ```
 The server will run on port: 5000
 
+##Demo
+
+View demo: [click](https://syiekei.github.io/Ride-With-Me/)
+
 ## Testing API on Postman
 
 *Note* Ensure that after you succesfully login a user, you use the generated token in the authorization header for the endpoints that require authentication. Remember to add Bearer before the token as shown:
