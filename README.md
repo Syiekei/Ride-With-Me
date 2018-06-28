@@ -1,17 +1,97 @@
-[![Build Status](https://travis-ci.org/Syiekei/Ride-With-Me.svg?branch=develop)](https://travis-ci.org/Syiekei/Ride-With-Me) [![Coverage Status](https://coveralls.io/repos/github/Syiekei/Ride-With-Me/badge.svg?branch=develop)](https://coveralls.io/github/Syiekei/Ride-With-Me?branch=develop) [![Test Coverage](https://api.codeclimate.com/v1/badges/b3f10d58926db9638e30/test_coverage)](https://codeclimate.com/github/Syiekei/Ride-With-Me/test_coverage) [![Maintainability](https://api.codeclimate.com/v1/badges/b3f10d58926db9638e30/maintainability)](https://codeclimate.com/github/Syiekei/Ride-With-Me/maintainability)
+[![Build Status](https://travis-ci.org/Syiekei/Ride-With-Me.svg?branch=feature)](https://travis-ci.org/Syiekei/Ride-With-Me)
+[![Coverage Status](https://coveralls.io/repos/github/Syiekei/Ride-With-Me/badge.svg)](https://coveralls.io/github/Syiekei/Ride-With-Me)
 
-# Ride-With-Me
-Ride-With-Me is a carpooling app that allows drivers to create ride offers and passengers to join available ride offers
+## Ride-With-Me
 
-## Getting started
- to get a copy of this repo run ``git clone https://github.com/Syiekei/Ride-With-Me.git`` from your local terminal
- cd into the UI folder and open ``index.html`` in the browser
+Web Application that enables users (Tax Operators) to create an account and be able to create ride offers. Passengers will be able to view the ride offers and request to join:
+
+- Register an account and Login into it.
+- Register, Update and delete a Ride .
+- View all Rides.
+- View One Rides.
+- Post Requests for rides.
+- View all Requests for rides
+- Change users password
+
+## Prerequisites
+
+- Python 3.6 or a later version
+
+## Installation
+Clone the repo.
+```
+$ git clone https://github.com/syiekei/Ride-With-Me.git
+```
+and cd into the folder:
+```
+$ /Ride-With-Me
+```
+## Virtual environment
+Create a virtual environment:
+```
+mkvirtualenv <virtual environment name>
+```
+## Dependencies
+Install package requirements to your environment.
+```
+pip install -r requirements.txt
+```
+
+## Testing
+To set up unit testing environment:
+
+```
+$ pip install nose
+$ pip install coverage
+```
+
+To run tests perform the following:
+
+```
+$ nosetests --with-coverage
+```
+
+
+## Start The Server
+To start the server run the following command
+```
+Set environment variable as follows:
+set FLASK_APP=V1/__init__.py
+Then run:
+python manage.py run 
+```
+The server will run on port: 5000
+
+## Testing API on Postman
+
+*Note* Ensure that after you succesfully login a user, you use the generated token in the authorization header for the endpoints that require authentication. Remember to add Bearer before the token as shown:
+```
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9eyJpYXQiO 
+```
+
+
+### API endpoints
+
+| Endpoint | Method |  Functionality | Authentication |
+| --- | --- | --- | --- |
+| /api/auth/v1/register | POST | Creates a user account | FALSE
+| /api/auth/v1/login | POST | Logs in a user | TRUE
+| /api/auth/v1/logout | POST | Logs out a user | TRUE
+| /api/auth/v1/change_password | POST | Change user password | TRUE
+| /api/v1/rides | POST | Creates a ride | TRUE
+| /api/v1/rides | GET | Retrieves all rides | TRUE 
+| /api/v1/rides/{ride_id} | GET | Get a ride | TRUE
+| /api/v1/rides/{ride_id} | PUT | Update a ride details | TRUE
+| /api/v1/rides/{ride_id} | DELETE | Delete a ride | TRUE
+| /api/v1/rides/{ride_id}/requests | POST | Request a ride | TRUE
+| /api/v1/rides/{ride_id}/requests | GET | Get all requests for a ride | TRUE
+
+
+
+## API Documentation
 
 ## Authors
-* [Wycliff Syiekei](https://github.com/Syiekei)
 
-## License
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) file for details
+* **Wycliff Syiekei** - [syiekei](https://github.com/syiekei)
 
-## Acknowledgements
-* [Derrick Kipkurui](https://github.com/derrickkipkurui)  for his valuable insights
+## Acknowledgments
